@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\tinderController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,5 +18,5 @@ use App\Http\Controllers\tinderController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::resource ('users',UserController::class);
 Route::resource('tinder', App\Http\Controllers\tinderController::class);
