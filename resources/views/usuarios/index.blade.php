@@ -13,6 +13,25 @@
             <tr>
             <td>{{$usuario->nombre}}</td>
             <td>{{$usuario->email}}</td>
+            <td>{{$usuario->edad}}</td>
+            <td>{{$usuario->sexo}}</td>
+            <td>{{$usuario->orientacion sexual}}</td>
+            <td>{{$usuario->descripcion}}</td>
+
+            </tr>
+            @endforeach
+
+    </table>
+    <h1>grupos</h1>
+    <table>
+            @foreach($grupos as $grupos)
+            <tr>
+            <td>{{$grupo->nombre}}</td>
+            <td>{{$grupo->tematica}}</td>
+            <td>{{$grupo->orientacion sexual}}</td>
+            <td>{{$grupo->descripcion}}</td>
+            <td>{{$grupo->cantidad personas}}</td>
+            
 
             </tr>
             @endforeach

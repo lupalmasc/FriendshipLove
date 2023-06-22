@@ -16,6 +16,8 @@ return new class extends Migration
             $table->timestamps();
             $table->string('nombre');
             $table->string('tematica');
+            $table->string('descripcion');
+            $table->string('orientacion_s');
             $table->integer('cant_personas');
 
         });

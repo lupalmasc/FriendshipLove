@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Grupo;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -12,8 +13,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        $usuarios=User::where('nombre','andres')->get();
-        return view ('usuarios.index', compact('usuarios'));
+        $usuarios=User::get();
+        $grupos=Grupo::get();
+        return view ('usuarios.index', compact('usuarios','grupos'));
+        
+        
     }
 
     /**
