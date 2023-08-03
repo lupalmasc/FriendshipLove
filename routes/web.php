@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\tinderController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PermisoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,4 @@ Route::get('/', function () {
 });
 Route::resource ('users',UserController::class);
 Route::resource('tinder', App\Http\Controllers\tinderController::class);
+Route::resource('permisos', App\Http\Controllers\PermisoController::class);
