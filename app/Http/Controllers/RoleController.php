@@ -2,22 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Models\Grupo;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class RoleController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $usuarios=User::get();
-        $grupos=Grupo::get();
-        return view ('usuarios.index', compact('usuarios','grupos'));
-        
-        
+        //
     }
 
     /**
@@ -33,8 +27,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $permission = Permission::create(['name' => $request->permiso]);
-        return redirect('permisos');
+        //
     }
 
     /**

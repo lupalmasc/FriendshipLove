@@ -5,6 +5,7 @@
 
 <body>
     <h1>FRIENDSHIPLOVE</h1>
+    <a href="{{route('permisos.create')}}">Crear nuevo permiso</a>
    <table class="Tinder">
 
   <tr>
