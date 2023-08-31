@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 
 class RoleController extends Controller
 {
@@ -11,7 +13,9 @@ class RoleController extends Controller
      */
     public function index()
     {
-        //
+        $roles=Role::get();
+        return view ('roles.index', compact('roles'));
+        
     }
 
     /**
@@ -60,5 +64,12 @@ class RoleController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function asignar($id)
+    {
+         $role=Role::find($id);
+         $permisos=Permission::get();
+         return view('roles.asignar',  compact('role','permisos'));
     }
 }
