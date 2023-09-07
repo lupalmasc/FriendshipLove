@@ -13,7 +13,7 @@
     <h1>FRIENDSHIPLOVE</h1>
 
     <h2>Roles</h2>
-    <a href="{{ route('roles.create') }}">Crear nuevo rol</a>
+  
     <table class="Tinder">
 
         <tr>
@@ -26,7 +26,7 @@
             <tr>
 
                 <td>{{ $role->name}}</td>
-                <a id="crearpermiso" href="{{ route('roles.asignar', $role->id) }}">
+                <a id="crearpermiso" href="{{ route('roles.create', $role->id) }}">
                     <button>Crear permisos</button>
                 </a>
 

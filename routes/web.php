@@ -20,7 +20,8 @@ use App\Http\Controllers\RoleController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource ('users',UserController::class);
-Route::resource('tinder', App\Http\Controllers\tinderController::class);
-Route::resource('permisos', App\Http\Controllers\PermisoController::class);
+Route::resource('users',UserController::class);
+Route::resource('tinder', tinderController::class);
+Route::resource('permisos', PermisoController::class);
+Route::resource('roles', RoleController::class);
 Route::get('roles/asignar/{id}', [RoleController::class,'asignar'])->name('roles.asignar');

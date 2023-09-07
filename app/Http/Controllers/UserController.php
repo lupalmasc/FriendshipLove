@@ -6,6 +6,8 @@ use App\Models\User;
 use App\Models\Grupo;
 use Illuminate\Http\Request;
 
+use function Laravel\Prompts\password;
+
 class UserController extends Controller
 {
     /**
@@ -25,7 +27,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view ('usuarios.create');
     }
 
     /**
@@ -33,8 +35,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $permission = Permission::create(['name' => $request->permiso]);
-        return redirect('permisos');
+        $permission = User::create(['name' => $request->user, 'password' =>hash(PASSWORD_BCRYPT,$request->password)]);
+        return redirect('user');
     }
 
     /**

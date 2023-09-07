@@ -8,14 +8,25 @@
 </head>
 <body>
     <h1>usuarios</h1>
+            <tr>
+            <a href="{{route('users.create')}}">Crear nuevo usuario</a>
+
+    <td>Nombre de usuario</td>
+
+    <td>Contraseña del usuario </td>
+
+    
+
+  </tr>
     <table>
             @foreach($usuarios as $usuario)
             <tr>
+        
             <td>{{$usuario->nombre}}</td>
             <td>{{$usuario->email}}</td>
             <td>{{$usuario->edad}}</td>
             <td>{{$usuario->sexo}}</td>
-            <td>{{$usuario->orientacion sexual}}</td>
+            <td>{{$usuario->orientacion_sexual}}</td>
             <td>{{$usuario->descripcion}}</td>
 
             </tr>
@@ -28,9 +39,9 @@
             <tr>
             <td>{{$grupo->nombre}}</td>
             <td>{{$grupo->tematica}}</td>
-            <td>{{$grupo->orientacion sexual}}</td>
+            <td>{{$grupo->orientacion_sexual}}</td>
             <td>{{$grupo->descripcion}}</td>
-            <td>{{$grupo->cantidad personas}}</td>
+            <td>{{$grupo->cantidad_personas}}</td>
             
 
             </tr>
