@@ -18,7 +18,7 @@
     @csrf
 
 
-        <input type="text" name="rol" placeholder="Nombre del rol">
+        <input type="text" name="name" placeholder="Nombre del rol">
         <input type="submit" value="Cargar">
         </table>
         </form>

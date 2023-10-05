@@ -31,8 +31,9 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        $permission = Role::create(['name' => $request->rol]);
-        return redirect('roles');
+        $datos=$request->all();
+        $permission = Role::create($datos);
+        return redirect('/roles');
     }
 
     /**

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Grupo;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Hash;
 use function Laravel\Prompts\password;
 
 class UserController extends Controller
@@ -35,8 +35,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $permission = User::create(['name' => $request->user, 'password' =>hash(PASSWORD_BCRYPT,$request->password)]);
-        return redirect('user');
+        $datos=$request->all();
+        $permission = User::create($datos);
+        return redirect('/users');
     }
 
     /**
