@@ -27,7 +27,9 @@ class UserController extends Controller
      */
     public function create()
     {
+        
         return view ('usuarios.create');
+
     }
 
     /**
@@ -71,4 +73,21 @@ class UserController extends Controller
     {
         //
     }
+
+    public function asignargrupo()
+    {
+ 
+        return view ('grupos.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function storegrupo(Request $request)
+    {
+        $datos=$request->all();
+        $permission = Grupo::create($datos);
+        return redirect('/users');
+    }
+
 }

@@ -25,3 +25,5 @@ Route::resource('tinder', tinderController::class);
 Route::resource('permisos', PermisoController::class);
 Route::resource('roles', RoleController::class);
 Route::get('roles/asignar/{id}', [RoleController::class,'asignar'])->name('roles.asignar');
+Route::get('grupos/create', [UserController::class,'asignargrupo'])->name('grupos.create');
+Route::post('grupos/store', [UserController::class,'storegrupo'])->name('grupos.store');

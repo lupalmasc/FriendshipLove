@@ -34,9 +34,20 @@
 
     </table>
     <h1>grupos</h1>
+
+    <a href="{{route('grupos.create')}}">Crear nuevo grupo</a>
+
+                <td>Nombre del Grupo</td>
+                <td>Tematica </td>
+                <td>Orientacion Sexual </td>
+                <td>Descripcion del Grupo</td>
+                <td>Cantidad de Personas</td>
+
     <table>
-            @foreach($grupos as $grupos)
+            @foreach($grupos as $grupo)
             <tr>
+
+            
             <td>{{$grupo->nombre}}</td>
             <td>{{$grupo->tematica}}</td>
             <td>{{$grupo->orientacion_sexual}}</td>
