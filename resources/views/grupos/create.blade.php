@@ -14,8 +14,6 @@
          <input type="text" name="descripcion" placeholder="Descripcion del Grupo">
          <input type="number" name="cant_personas" placeholder="Cantidad de Personas">
          
-        <input type="submit" value="Cargar">
+                            <input type="submit" value="Cargar">
     </form>
 </body>
-
-</html>

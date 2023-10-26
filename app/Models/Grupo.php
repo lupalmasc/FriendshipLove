@@ -4,12 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\User;
+use App\Http\Models\User;
 
-
-class Grupos extends Model
+class Grupo extends Model
 {
-    use  HasFactory;
+    use HasFactory;
 
     
     /**
@@ -33,11 +32,4 @@ class Grupos extends Model
      
     }
    
-}
-
-
-class Grupo extends Model
-{
-    use HasFactory;
-    
 }

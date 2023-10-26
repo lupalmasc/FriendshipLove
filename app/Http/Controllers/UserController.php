@@ -77,7 +77,7 @@ class UserController extends Controller
     public function asignargrupo()
     {
  
-        return view ('grupos.create');
+        return view ('grupo.create');
     }
 
     /**
@@ -86,6 +86,7 @@ class UserController extends Controller
     public function storegrupo(Request $request)
     {
         $datos=$request->all();
+        unset($datos["_token"]);
         $permission = Grupo::create($datos);
         return redirect('/users');
     }
