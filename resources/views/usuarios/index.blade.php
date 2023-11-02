@@ -9,6 +9,7 @@
                 justify-content: center;
                 height: 100vh;
                 margin: 0;
+                margin-top: 100px;
         }
 
         .titulo {
@@ -22,7 +23,9 @@
                 align-items: center;
                 justify-content: space-between;
                 margin-top: 20px;
-                width: 80%;
+                width: 100%;
+                position: absolute;
+                height: 100%;
         }
 
         .izquierda,
@@ -44,8 +47,8 @@
         }
 
         .circulo img {
-                width: 60px;
-                height: 60px;
+                width: 200px;
+                height: 200px;
         }
 
         .boton {
@@ -60,6 +63,9 @@
         form {
                 margin-top: 20px;
                 text-align: center;
+        }
+        header¨{
+                position: fixed;
         }
 </style>
 
@@ -136,7 +142,7 @@
                 <div class="contenedor">
                         <div class="izquierda">
                                 <div class="circulo">
-                                        <img src="usuario.png" alt="Imagen">
+                                        <img src="C:\Users\Luci\FriendshipLove\FriendshipLove\public\images\usuario.png.png" alt="Imagen">
                                         <button class="boton">Comenzar</button>
                                 </div>
 
